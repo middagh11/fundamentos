@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	cout <<"bolivianos el hado propicio"<< endl;
+	cout <<"corono nuestros votos y anhelos"<< endl;
+	cout <<" es ya libre ya libre este suelo"<< endl;
+	cout <<" ya ceso su servil condicion"<< endl;
+
+	getch();
+}
