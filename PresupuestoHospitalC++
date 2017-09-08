@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	float M,g,t,p;
+	cout<<"ingrese presupuesto: ";
+	cin>>M;
+		if (M>1000000){
+			g=M*0.35;
+			t=M*0.25;
+			p=M*0.25;
+		}
+		else {
+			g=M*0.40;
+			t=M*0.30;
+			p=M*0.30;
+		}
+	cout<<"presupuesto de ginecologia es: "<<g<<endl;
+	
+	cout<<"presupuesto de pediatria es: "<<p<<endl;
+
+	cout<<"presupuesto de traumatologia: "<<t<<endl;
+getch();
+
+}
