@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int h,m,s,h2,m2,s2,H,H2,H3,hf,mf,sf;
+	cout<<"ingrese la hora de su primer horario: ";
+	cin>>h;
+	cout<<"ingrese los minutos de su primer horario: ";
+	cin>>m;
+	cout<<"ingrese los segundos de su primer horario: ";
+	cin>>s;
+	H=(h*3600)+(m*60)+s;
+	cout<<"ingrese la hora de su segundo horario: ";
+	cin>>h2;
+	cout<<"ingrese los minutos de su segundo horario: ";
+	cin>>m2;
+	cout<<"ingrese los segundos de su segundo horario: ";
+	cin>>s2;
+	H2=(h2*3600)+(m2*60)+s2;
+		if (H>H2)
+			H3=(H-H2);
+		else 
+			H3=(H2-H);
+	hf=(H3/3600);
+	mf=(H3/60)-(hf*60);
+	sf=H3-(hf*3600)-(mf*60);
+	cout<<hf<<":"<<mf<<","<<sf<<endl;
+	getch();
+}
