@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float serie(float x,int n);
+void main()
+{
+	float s,x,n;
+	cout<<"ingrese el valor de x: ";
+	cin>>x;
+	cout<<"ingrese el valor de n: ";
+	cin>>n;
+	s=serie(x,n);
+	cout<<"el valor de la sumatoria de la serie es : "<<s<<endl;
+	getch();
+}
+float serie(float x, float n)
+{
+	int I,i,factorial;
+	float S,P;
+	S=(3.1416/5);
+	for (I=2;I<=n;I=I+2) {
+		factorial=1;
+		for(i=2;i<=1;i++) {
+			factorial+=factorial*i;
+		}
+		P=pow(x,I)/factorial;
+		P=P*(-1);
+		S+S+P;
+	}
+	return S;
+}
