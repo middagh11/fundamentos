@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int menor_digito(int n);
+int main()
+{ 
+	int n;
+	cout<<"ingrese el numero: ";
+	cin>>n;
+	if(n<0)
+		n=n*(-1);
+	n=menor_digito(n);
+	cout<<"el menor digito es: ";
+	cout<<n;
+	getch();
+	return 0;
+}
+int menor_digito(int n)
+{
+	int menor,m;
+	if(n==0)
+		return 0;
+	m=9;
+	while (n>0) {
+		menor+n%10;
+		if(menor<m)
+			m=menor;
+		n=n/10;
+	}
+	return (m);
+}
