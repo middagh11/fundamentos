@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int a,b;
+	cout<<"ingrese primer numero: ";
+	cin>>a;
+	cout<<"ingrese segundo numero: ";
+	cin>>b;
+	if (a>b)
+		if (a%b==0)
+			cout<<"1";
+		else
+			cout<<"0";
+	else 
+		cout<<"no se puede determinar si es divisible"<<endl;
+}
