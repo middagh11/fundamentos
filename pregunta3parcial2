@@ -1,0 +1,16 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float x,s;
+	int n;
+	cout<<"ingrese x: ";
+	cin>>x;
+	cout<<"ingrese n: ";
+	cin>>n;
+	s=sumatoria(x,n)
+	cout<<"la sumatoria es: "<<s<<endl;
+	getch();
+}
