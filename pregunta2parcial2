@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float dias,distancia,precio;
+	cout<<"ingrese la distancia de su viaje: ";
+	cin>>distancia;
+	cout<<"ingrese los de estancia: ";
+	cin>>dias;
+	if (dias>7)
+		if(distancia>500)
+			precio=((distancia*0.75)*0.25)*2;
+		else 
+			precio=(distancia*0.75)*2;
+			cout<<"el precio total es: "<<precio<<endl;
+	else (7>dias);
+			precio=(distancia*0.75)*2;
+	cout<<"el precio total es: "<<precio<<endl;
+	getch();
+}
