@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	int num,aux;
+	int vec[100];
+	cout<<"ingrese el numero de valores que tendra el vector: ";
+	cin>>num;
+	for(int i=0;i<num;i++)
+	{
+		cout<<"ingrese numero: "<<i+1;
+		cin>>vec[i];
+	}
+	for(int i=0;i<num;i++)
+	{
+		for(int j=0;j<num;j++)
+		{
+			if (vec[j]>vec[j+1])
+			{
+				aux=vec[i];
+				vec[i]=vec[j+1];
+				vec[j+1]=aux;
+			}
+		}
+	}		
+	for(int k=0; k<num;k++)
+	{
+		cout<<"los valores son: "<<vec[k]<<","<<endl;
+	}
+}
