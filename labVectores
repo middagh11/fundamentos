@@ -1,0 +1,122 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+using namespace std;
+
+#define max 100
+//funciones
+
+void cargar(int vec[], int n);
+void mostrar(int vec[], int n);
+void ordenar(int vec[], int n);
+void buscar(int vec[], int n);
+
+
+int main()
+{
+	int vector[max], n, opcion;
+	bool error=true;
+
+	//numero de elementos del vector
+	cout<<"ingrese el numero de elementos: ";
+	cin>>n;
+	
+	do{
+		system("cls");
+		cout<<"Que desea realizar?"<<endl;
+		cout<<"1. cargar vector"<<endl;
+		cout<<"2. mostrar vector"<<endl;
+		cout<<"3. ordenar vector"<<endl;
+		cout<<"4. buscar valor de un elemento"<<endl;
+		cout<<"0. salir"<<endl;
+
+		cin>>opcion;
+
+		switch(opcion){
+	
+				case 1:cargar(vector, n);
+						break;
+				case 2:mostrar(vector, n);
+						break;
+				case 3:ordenar(vector, n);
+						break;
+
+				case 4:
+						buscar(vector, n);
+						break;
+
+
+				case 0: return 0;
+
+				default:cout<<"error ingrese un numero valido.";
+						error=false;
+						break;
+		}
+	
+	}while(error!=false);
+
+
+	return 0;
+}
+void cargar(int vec[], int n){
+
+	for(int i=0; i<n; i++){
+	cout<<"ingrese elemento ["<<i<<"]: ";
+	cin>>vec[i];
+	}
+
+}
+
+
+void mostrar(int vec[], int n){
+
+		for(int i=0; i<n; i++){
+	cout<<"elemento ["<<i<<"]= ";
+	cout<<vec[i]<<endl;
+	
+	}
+		cout<<"enter para continuar";
+		getch();
+}
+void ordenar(int vec[], int n){
+
+	int aux;
+
+	for(int i=0; i<n; i++)
+	{
+		for(int j=i+1; j<n; j++)
+		{
+			if(vec[j]<vec[j-1])
+			{
+			aux=vec[i];
+			vec[i]=vec[j];
+			vec[j]=aux;
+			}
+		}
+	}
+
+
+}
+void buscar(int vec[], int n){
+
+	int elemento, pos=0;
+	bool elem=false;
+	cout<<"ingrese el elemento que busca";
+	cin>>elemento;
+	
+	for(int i=0; i<n; i++)
+	{
+		if(vec[i]==elemento){
+			elem=true;
+		}
+		pos=pos+1;
+	}
+
+	        if (elem)
+				cout<<"el elemento se encuentra en el vector en la posicion: "<<"["<<pos<<"]";
+			else
+				cout<<"el elemento no se encuentra en el vector";
+
+			getch();
+}
